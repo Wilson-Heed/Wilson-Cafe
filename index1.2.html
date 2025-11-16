@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="index1.2.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <title>Wilson Cafe </title>
+</head>
+<body>
+    
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .sec1{
+            background-color:rgb(15, 1, 1 );
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            background-color: rgb(15, 1, 1);
+            /* border: 1px solid whitesmoke; */
+            padding-top: 20px;
+        }
+        .top{
+            display: flex;
+        }
+        .top li{
+            margin: 20px;
+            list-style-type: none;
+            color: whitesmoke;
+            font-family: cursive;
+
+        }
+        li a{
+            text-decoration: none;
+            color: whitesmoke;
+        }
+        .caf{
+            margin-top: 10px;
+            list-style-type: none;
+            color: whitesmoke;
+            font-family: cursive;
+        } 
+
+
+        #dis{
+            display: flex;
+            margin-top: 80px;
+            justify-content: space-around;
+        }
+        .cover{
+            margin-top: 70px;
+            color: whitesmoke;
+
+        }
+        .cover h2{
+            font-size: 30px;
+            font-family:cursive ;
+            font-style: oblique;
+        }
+        .old{
+            font-size: 20px;
+            font-family:cursive ;
+        }
+        .old button{
+            display: inline-block;
+            padding: 10px;
+            text-align: center;
+            border: 0px solid transparent;
+            background: none;
+            color: whitesmoke;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+        .old span{
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        .old span::after{
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            transition: 0.5s;
+            right: -20px;
+        }
+        .old button:hover span{
+            border-bottom: 1px solid whitesmoke;
+            padding-right: 25px;
+        }
+        .old button:hover span::after{
+            opacity: 1;
+            right: 0;
+        }
+
+        /* section 2 */
+        .sec2{
+            background-color: rgb(238, 195, 131);
+            padding-bottom: 10px;
+        }
+        .our{
+            text-align: center;
+            padding-top: 20px;
+            font-family: cursive;
+            border-bottom: 1px solid black;
+            /* text-shadow: 0 0 5px black, 0 0 10px black; */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+            border-radius: 10px;
+
+        }
+        .our2{
+            font-size: 20px;
+            padding: 40px;
+            font-family: cursive;
+            text-align: center;
+            text-decoration:underline;
+
+        }
+        .game-container {
+            position: relative;
+            overflow: hidden;
+            } 
+
+            .image-track {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            }
+
+            .image-track::-webkit-scrollbar {
+            display: none; /* Hide scrollbar */
+            }
+
+            .image-item {
+            margin-bottom: 10px; 
+            /* min-width: 300px; */
+            flex-shrink: 0;
+            margin-right: 1rem;
+            text-align: center;
+            height: fit-content;
+            border: 0px solid transparent;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+            }
+
+            .image-item img {
+            /* width: 100%; */
+            border-radius: 10px;
+            }
+        .dis{
+            display: flex;
+            justify-content: space-around;
+        }
+
+            .arrow-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            background-color: rgb(238, 195, 131);
+            color: black;
+            border: 2px solid white;
+            border-radius: 80px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 24px;
+            align-items: center;
+            }
+
+            .arrow-left {
+            left: 20px;
+            }
+
+            .arrow-right {
+            right: 20px;
+            }
+        .old2{
+            font-size: 15px;
+            font-family:cursive ;
+        }
+        .old2 button{
+            display: inline-block;
+            padding: 10px;
+            /* text-align:right; */
+            border: 0px solid transparent;
+            background: none;
+            color: black;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+        .old2 span{
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        .old2 span::after{
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            transition: 0.5s;
+            right: -20px;
+        }
+        .old2 button:hover span{
+            border-bottom: 1px solid whitesmoke;
+            padding-right: 25px;
+        }
+        .old2 button:hover span::after{
+            opacity: 1;
+            right: 0;
+        }
+
+        /* .row li{
+            list-style-type: none;
+            font-family: cursive;
+            padding: 10px;
+        }
+        .row h4{
+            margin-top: 20px;
+            padding: 10px;
+            font-family: cursive;
+        } */
+
+        /* ssection 3 */
+        .sec3{
+            padding-bottom: 10px;
+            background-color: rgb(238, 195, 131);
+        }
+        .services{
+            text-align: justify;
+            margin:30px;
+            padding: 25px;
+            background-color: rgb(238, 195, 131);
+            border: 0px solid transparent;
+            border-radius: 25px;
+            font-size: 15px;
+            font-family: cursive;
+            box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 6px 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+        }
+        .vice{
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        /* section 4 */
+        .sec4{
+            text-align: center;
+            background-color: rgb(238, 195, 131);
+            padding-bottom: 10px;
+        }
+        #me{
+            margin-top: 20px;
+            /* margin-left: 0px; */
+            border-radius: 80px;
+            border: 2px solid black;
+            width: 120px;
+            height: 120px;
+            /* max-width: 30vw; */
+            top: 30%;
+            opacity: 0;
+            transform: translate(-50%, 30px);
+            animation: fadeSlideIn 1.2s ease-out forwards;
+            
+        }
+        @keyframes fadeSlideIn{
+        to{
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+            
+        } */
+        #ab{
+            background-color: rgb(238, 195, 131);
+        }
+        /* #mr{
+            background-color: rgb(0, 0, 0, 0.6);
+            margin: 30px;
+            border-radius: 12px;
+        } */
+        #mr p{
+            text-align: center;
+            padding: 20px;
+            font-size: 15px;
+            font-family: cursive;
+        }
+
+        /* SECTION 5 */
+
+        .sec5{
+            margin: 0px;
+            padding: 0px;
+            background-color: rgb(15, 1, 1);
+        }
+        .bottom{
+            display: flex;
+            justify-content: space-around;
+            color: whitesmoke;
+            padding-top: 20px;
+            font-family: cursive;
+        }
+        .boot{
+            font-size: 25px;
+        }
+        .bot input{
+            border: 0px solid transparent;
+            border-bottom: 1px solid whitesmoke;
+            padding: 0px;
+            background: none;
+            margin-bottom: 50px;
+            margin-top: 20px;
+            font-family: cursive;
+            font-size: 15px;
+        }
+        /*  section 6 */
+
+        .map-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+        height: 0%;
+        overflow: hidden;
+        }
+
+        .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        border: 0;
+        }
+
+    </style>
+
+
+    <section class="sec1">
+        <nav class="fixed-top">
+            <ul class="caf">
+                <li><h3> Wilson Cafe <i class="fa-solid fa-mug-hot"></i> </h3></li>
+            </ul>
+            <ul class="top">
+                <li> <a href="#dis"> Home </a> </li>
+                <li> <a href="#our"> Features/Services </a> </li>
+                <li> <a href="#ab"> About </a> </li>
+                <li> <a href="#bottom"> Contact Us </a> </li>
+            </ul>
+        </nav>
+
+
+        <div id="dis" class="container-fluid">
+            <div>
+                <img src="image/cafe4.webp" alt="", width="350px", height="350px">
+            </div>
+            <div class="cover">
+                <h2>Discover the taste of a caffeine made perfect</h2>
+                <div class="old">
+                    <p>Experience the rich and bold taste of our exquisite coffee blends and snacks perpare to your satisfaction. </p>
+                    <button><span> Order Now </span></button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- section 2 -->
+
+    <section class="sec2">
+        <div class="our" id="our"><h2>Features</h2></div>
+        <div class="our2"><h3>HOT COFFEE</h3></div>
+        <div class="container my-5 game-container">
+            <button class="arrow-btn arrow-left" onclick="scrollImages('left')">&#8592;</button>
+            <div class="image-track" id="imageTrack">
+                <div class="image-item">
+                    <img src="image/Americano.jpg" alt="1" width="300" height="300">
+                    <div class="dis">
+                        <p>Americano</p>
+                        <p> &#8358 1000.00</p>
+                    </div>
+                    <div class="old2"><button><span>Order Now</span></button></div>
+                </div>
+                <div class="image-item">
+                    <img src="image/Latte.avif" alt="2" width="300" height="300">
+                    <div class="dis">
+                        <p>Latte</p>
+                        <p>&#8358 2000.00</p>
+                    </div>
+                    <div class="old2"><button><span>Order Now</span></button></div>
+                </div>
+                <div class="image-item">
+                    <img src="image/Cappuccino.avif" alt="3" width="300" height="300">
+                    <div class="dis">
+                        <p>Cappuccino</p>
+                        <p>&#8358 3000.00</p>
+                    </div>
+                    <div class="old2"><button><span>Order Now</span></button></div>
+                </div>
+                <div class="image-item">
+                    <img src="image/Espresso.avif" alt="4" width="300" height="300">
+                    <div class="dis">
+                        <p>Espresso</p>
+                        <p>&#8358 1500.00</p>
+                    </div>
+                    <div class="old2"><button><span>Order Now</span></button></div>
+                </div>
+                <div class="image-item">
+                    <img src="image/Flat white.avif" alt="5" width="300" height="300">
+                    <div class="dis">
+                        <p>Flat White</p>
+                        <p>&#8358 2000.00</p>
+                    </div>
+                    <div class="old2"><button><span>Order Now</span></button></div>
+                </div>
+            </div>
+            <button class="arrow-btn arrow-right" onclick="scrollImages('right')">&#8594;</button>
+        </div>
+
+        <div class="our2"><h3>COLD COFFEE</h3></div>
+        <div class="container my-5 game-container">
+            <button class="arrow-btn arrow-left" onclick="scrollImagess('left')">&#8592;</button>
+            <div class="image-track" id="imageTrackss">
+                <div class="image-item">
+                    <img src="image/Cold coffee.avif" alt="1" width="300" height="300">
+                    <div class="dis">
+                        <p>Cold Coffee</p>
+                        <p> &#8358 1000.00</p>
+                    </div>
+                    <div class="old2"><button><span>Order Now</span></button></div>
+                </div>
+                <div class="image-item">
+                    <img src="image/iced tea.avif" alt="2" width="300" height="300">
+                    <div class="dis">
+                        <p>Iced Tea</p>
+                        <p>&#8358 1500.00</p>
+                    </div>
+                    <div class="old2"><button><span>Order Now</span></button></div>
+                </div>
+                <div class="image-item">
+                    <img src="image/Vegan shake.avif" alt="3" width="300" height="300">
+                    <div class="dis">
+                        <p>Vegan Shake</p>
+                        <p>&#8358 2000.00</p>
+                    </div>
+                    <div class="old2"><button><span>Order Now</span></button></div>
+                </div>
+                <div class="image-item">
+                    <img src="image/Chilled latte.avif" alt="4" width="300" height="300">
+                    <div class="dis">
+                        <p>Chilled Latte</p>
+                        <p>&#8358 2500.00</p>
+                    </div>
+                    <div class="old2"><button><span>Order Now</span></button></div>
+                </div>
+                <div class="image-item">
+                    <img src="image/Chocolate shake.avif" alt="5" width="300" height="300">
+                    <div class="dis">
+                        <p>Chocolate Shake</p>
+                        <p>&#8358 2000.00</p>
+                    </div>
+                    <div class="old2"><button><span>Order Now</span></button></div>
+                </div>
+            </div>
+            <button class="arrow-btn arrow-right" onclick="scrollImagess('right')">&#8594;</button>
+        </div>
+
+        <div class="our2"><h3>Snacks</h3></div>
+        <div class="container my-5 game-container">
+            <button class="arrow-btn arrow-left" onclick="scrollImage('left')">&#8592;</button>
+            <div class="image-track" id="imageTracks">
+                <div class="image-item">
+                    <img src="image/Pizza.avif" alt="1" width="300" height="300">
+                    <div class="dis">
+                        <p>Pizza</p>
+                        <p> &#8358 2500.00</p>
+                    </div>
+                    <div class="old2"><button><span>Order Now</span></button></div>
+                </div>
+                <div class="image-item">
+                    <img src="image/Sandwich.avif" alt="2" width="300" height="300">
+                    <div class="dis">
+                        <p>Sandwich</p>
+                        <p>&#8358 1000.00</p>
+                    </div>
+                    <div class="old2"><button><span>Order Now</span></button></div>
+                </div>
+                <div class="image-item">
+                    <img src="image/burger.avif" alt="3" width="300" height="300">
+                    <div class="dis">
+                        <p>Burger</p>
+                        <p>&#8358 1500.00</p>
+                    </div>
+                    <div class="old2"><button><span>Order Now</span></button></div>
+                </div>
+                <div class="image-item">
+                    <img src="image/french fries.avif" alt="4" width="300" height="300">
+                    <div class="dis">
+                        <p>French Fries</p>
+                        <p>&#8358 1000.00</p>
+                    </div>
+                    <div class="old2"><button><span>Order Now</span></button></div>
+                </div>
+                <div class="image-item">
+                    <img src="image/Chessecake.jpg" alt="5" width="300" height="300">
+                    <div class="dis">
+                        <p>Chessecake</p>
+                        <p>&#8358 2000.00</p>
+                    </div>
+                    <div class="old2"><button><span>Order Now</span></button></div>
+                </div>
+            </div>
+            <button class="arrow-btn arrow-right" onclick="scrollImage('right')">&#8594;</button>
+        </div>
+    </section>
+    
+    <!-- section 3 -->
+    <section class="sec3">
+        <div class="vice"><h3> OUR SERVICES</h3></div>
+        <div class="services">
+            <div>
+                <p>
+                    Wilson Cafe provides all the essential amenities to run or start your business. We offer a vibrant, flexible workspace setting, high-quality snacks and drinks, comfortable workstations, business secure/ high-speed internet and a deddication to making your business and your day easier.
+                    <br>
+                    Wilson Cafe can reduce your business overhead cost. We host variety of education classes to continue your career and education
+                </p>
+            </div>
+            <div>
+                <div><h4> Wilson Cafe Services</h4></div>
+                <ul>
+                    <li>Full coffee bar</li>
+                    <li>Training/Educational space</li>
+                    <li>Event space</li>
+                    <li>Private Offices</li>
+                    <li>Conference Room</li>
+                    <li>Professional Mailing Address</li>
+                    <li>Storage Lockers</li>
+                    <li>Printing, Copying, Scanning & Faxing</li>
+                    <li>Dual Monitors/keyboard</li>
+                    <li>Power Outlet</li>
+                    <li>Audio/video equipment</li>
+                    <li>Shipping & Receiving</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 4 -->
+
+    <section class="sec4">
+        <div class="position-relative text-center py5" id="ab">
+            <h2 class="fw-bold"> About Us</h2>
+            <img src="image/Snapchat-1680005475.jpg" alt="" class="img-fluid position-absolute start-50 translate-middle rounded-circle border border-dark shadow" id="me">
+            <div class="mt-5 pt-5 px-3 mx-auto bg-dark text-light rounded-4" id="mr">
+                <p class="px-2 py-5">
+                    Mr Wilson is a proud owner of the Wilson Cafe known for its inviting atmosphere and rich, aromatic coffee. With deep love for community he started a the cafe as a place where people could unwind and enjoy a good cup of coffee. Friendly and dedicated, Mr Wilson takes pride in every detail from selecting premium coffee beans to creating a cozy space that feels good and comfortable.
+                </p>
+            </div>
+        </div> 
+    </section>
+
+    <!-- section 5 -->
+
+    <section class="sec5">
+        <div class="bottom" id="bottom">
+            <div>
+                <img src="image/file_0000000073b06246aefd34ae3acdfe08.png" alt="" height="200" width="300">
+                <p class="boot"> Stay Up To Date On All News And Offer </p>
+                <div class="bot">
+                    <p> Be The First To Know About New Collections. Special Events, And What's Going On At Kitchen</p>
+                    <input type="email" placeholder="Enter Your Email Address"> <button></button>
+                </div>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <p>Wilsoncafe@gmail.com</p>
+                <p>Call Us: (+234)9078444663</p>
+                <p>Text Us: (+234)9078444663</p>
+                <br>
+                <p>12 Uniosun School Road, Osogbo Osun State Nigeria</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section 6 -->
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.265409668203!2d4.598641673514799!3d7.761652207541178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103827489a44ee03%3A0xc8d59bcaa8bfd123!2sOsun%20State%20University!5e0!3m2!1sen!2sng!4v1763240605196!5m2!1sen!2sng" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <footer style = "text-align: center; background-color: gray;"> &copy; copyright 2025</footer>
+    
+    <!-- Bootstrap JS (Optional) -->
+    <!-- section 2 js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript to scroll and handle keyboard -->
+    <script>
+        const imageTrack = document.getElementById('imageTrack');
+
+      function scrollImages(direction) {
+        const scrollAmount = 320; // Pixels to scroll
+        if (direction === 'left') {
+        imageTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        } else {
+        imageTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+        }
+
+        // Keyboard arrow support
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "ArrowLeft") {
+            scrollImages('left');
+            } else if (event.key === "ArrowRight") {
+            scrollImages('right');
+            }
+        });
+
+        // cold coffee
+
+         const imageTrackss = document.getElementById('imageTrackss');
+
+      function scrollImagess(direction) {
+        const scrollAmount = 320; // Pixels to scroll
+        if (direction === 'left') {
+        imageTrackss.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        } else {
+        imageTrackss.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+        }
+
+        // Keyboard arrow support
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "ArrowLeft") {
+            scrollImagess('left');
+            } else if (event.key === "ArrowRight") {
+            scrollImagess('right');
+            }
+        });
+
+        // Snacks
+
+         const imageTracks = document.getElementById('imageTracks');
+
+      function scrollImage(direction) {
+        const scrollAmount = 320; // Pixels to scroll
+        if (direction === 'left') {
+        imageTracks.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        } else {
+        imageTracks.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+        }
+
+        // Keyboard arrow support
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "ArrowLeft") {
+            scrollImage('left');
+            } else if (event.key === "ArrowRight") {
+            scrollImage('right');
+            }
+        });
+
+        // // dark mode function
+        // const toggleButton = document.getElementById('darkModeToggle');
+        // toggleButton.addEventListener('click', () =>{
+        //     document.body.classList.toggle('dark-mode');
+        // })
+
+    </script>
+</body>
+</html>

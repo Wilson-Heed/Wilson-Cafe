@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <title>Wilson Cafe</title>
+</head>
+<body>
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url('image/cascading-coffee-beans-dark-surface_1021945-5281.jpg') ;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section{
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+} 
+h1{
+    font-size: 48px;
+    color:#ffcc99;
+    font-style: italic;
+    font-family:cursive;
+    margin-bottom: 15px;
+}
+p{
+    font-size: 20px;
+    font-family: cursive;
+    color:#ff9999;
+    margin-bottom: 30px;
+}
+.button{
+    display: inline-block;
+    border-radius: 4px;
+    background:none;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    /* font-size: 18px;
+    font-style: italic;
+    font-family: cursive; 
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    padding: 12px 25px;
+    border: 0px transparent;
+    background-color: #c06c4d;
+    color:#fff;
+    border-radius: 8px;
+    transition: background 0.3s;
+    transition: border-radius 0.8s; */
+}
+.button span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition:  0.5s;
+}
+.button span::after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+button:hover span{
+    padding-right: 25px;
+    /* background-color: #9e5030;
+    border-radius: 20px; */
+}
+.button:hover span::after{
+    opacity: 1;
+    right: 0;
+}
+    </style>
+    <div class="section">
+        <h1> WELCOME TO WILSON CAFE </h1>
+        <P> where the rich taste of coffee comforts your soul</P>
+        <a href="index1.2.html"><button class="button"><span> Join Us </span></button></a>
+    </div>
+</body>
+</html>
